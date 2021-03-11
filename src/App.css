@@ -1,0 +1,54 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.sidebar {
+  position: fixed;
+  text-transform: capitalize;
+  height: 100%;
+  width: 230px;
+  left: 0;
+  background-color: #1d1919;
+  color: #fff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.sidebar .category-title {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #F8B739;
+}
+
+.sidebar .categories {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  list-style: none;
+  display: flex;
+  padding-left: 40px;
+  flex-direction: row;
+  align-items: center;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.sidebar ul li:hover {
+  cursor: pointer;  
+  color: #F8B739;
+  border-left: 4px solid #F8B739;
+}
