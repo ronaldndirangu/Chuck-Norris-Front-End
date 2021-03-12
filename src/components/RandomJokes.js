@@ -14,10 +14,10 @@ class RandomJokes extends Component {
 
     componentDidMount() {
         axios
-        .get('https://api.chucknorris.io/jokes/random?category=dev')
+        .get(`https://api.chucknorris.io/jokes/random?category=${this.props.category}`)
         .then(response => {
             console.log(response)
-            // this.setState({jokes: response.data})
+            this.setState({jokes: response.data})
         })
         .catch(error => {
             console.log(error)
