@@ -4,17 +4,17 @@ import JokesCategories from './components/JokesCategories';
 
 function App() {
   this.state = {
-    selectedCategories: ''
+    selectedCategory: ''
   }
   
   handleSelectCategory = category => {
-    this.setState({ selectedCategories: category })
+    this.setState({ selectedCategory: category })
   }
   
   return (
     <div className="App">
       <JokesCategories handleSelectCategory={handleSelectCategory} />
-      <RandomJokes categories={selectedCategories} />
+      <RandomJokes category={selectedCategory} />
     </div>
   );
 }
