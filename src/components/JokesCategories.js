@@ -21,10 +21,6 @@ class JokesCategories extends Component {
         console.log(error);
       });
   }
-
-  handleClick = (event) => {
-    event.preventDefault()
-  }
   
   render() {
     const { categories } = this.state;
@@ -34,7 +30,7 @@ class JokesCategories extends Component {
         <ul className="categories">
           {categories.length
             ? categories.map((category, index) => (
-                <li key={index} className="item" onClick={this.handleClick}>
+                <li key={index} className="item" onClick={() => this.props.handleSelectCategory(category)}>
                   {category}
                 </li>
               ))
